@@ -14,17 +14,20 @@ import GraduationCap from './assets/GraduationCap.png';
 import Achievement from './assets/achievement-icon1.png';
 import QuizIcon from './assets/quiz-icon1.png';
 import Pinned from './assets/Pin-1.png'
+import LearningPaths from './components/LearningPaths';
+import JobPortal from './components/JobPortal';
+import YourJourney from './components/YourJourney';
 
 const steps = [
   {
     number: "01",
     title: "Structured Courses",
     description: "Industry-relevant courses designed by experts to build in-demand skills.",
-    colorText: "text-[#6B46C1]",
+    colorText: "text-[#6B46C1]  ",
     bgColor: "bg-[#F4F0FF]",
     icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>,
     isPinnedRight: true,
-    rotateClass: "-rotate-3"
+    rotateClass: "-rotate-9"
   },
   {
     number: "02",
@@ -79,23 +82,23 @@ const steps = [
     title: "Career Ready",
     description: "Build your resume, explore job opportunities and take the next step in your career.",
     colorText: "text-[#4F46E5]",
-    bgColor: "bg-[#EEF2FF]",
+    bgColor: "bg-[#F4F0FF]",
     icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>,
     isPinnedLeft: true,
-    rotateClass: "rotate-3"
+    rotateClass: "rotate-[8deg]"
   }
 ];
 
 const StepCard = ({ number, title, description, colorText, bgColor, icon, isPinnedRight, isPinnedLeft, rotateClass }) => (
-  <div className={`relative bg-white p-[12px] rounded-[32px] shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] w-[300px] flex-shrink-0 ${rotateClass || ''} hover:-translate-y-2 transition-transform duration-300 z-10`}>
+  <div className={`relative bg-white p-[10px] rounded-[32px] shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] w-[250px] flex-shrink-0 ${rotateClass || ''} hover:-translate-y-2 transition-transform duration-300 z-10`}>
     {(isPinnedLeft || isPinnedRight) && (
-       <div className={`absolute -top-6 ${isPinnedLeft ? 'left-6' : 'right-6'} w-14 h-14 z-20`}>
-         <img src={Pinned} className="w-full h-full object-contain" alt="Pin" />
-       </div>
+      <div className={`absolute -top-2 ${isPinnedLeft ? '-left-4' : 'right-0'} w-14 h-14 z-20`}>
+        <img src={Pinned} className="w-[89px] h-[80px]object-contain" alt="Pin" />
+      </div>
     )}
-    <div className={`w-full h-full rounded-[24px] p-6 flex flex-col ${bgColor}`}>
-      <div className="flex justify-between items-start mb-6">
-        <span className={`text-[40px] font-light ${colorText} leading-none`} style={{ fontFamily: '"Sk-Modernist", sans-serif' }}>{number}</span>
+    <div className={`w-[230px] h-[175px] rounded-[24px] p-5 flex flex-col ${bgColor}`}>
+      <div className="flex justify-between items-start mb-2">
+        <span className={`text-[40px] font-light ${colorText} leading-none`} style={{ fontFamily: '"Handlee", cursive', fontWeight: 400, fontStyle: "normal", fontSize: "40px" }}>{number}</span>
         <div className={`${colorText} mt-1`}>{icon}</div>
       </div>
       <h4 className="text-[20px] font-bold text-gray-900 mb-2" style={{ fontFamily: '"SF Pro", -apple-system, BlinkMacSystemFont, sans-serif' }}>{title}</h4>
@@ -210,7 +213,7 @@ const Home = () => {
       <div className="w-full bg-gradient-to-b from-white to-[#F2F2F2] pt-20 pb-10">
         {/* Feature Section */}
         <div className="w-full max-w-[1368px] mx-auto px-8 md:px-16 lg:px-[125px] lg:pl-20 flex flex-col lg:flex-row items-center justify-between relative z-10 overflow-hidden lg:overflow-visible">
-          
+
           {/* Left Column - Text */}
           <div className="w-full lg:w-[60%] flex flex-col items-start transform -translate-y-4 lg:-translate-y-5">
             <h3 style={{ fontFamily: '"SF Pro", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 590, fontStyle: 'normal', fontSize: '55px', color: '#ABABAB' }}>
@@ -252,36 +255,36 @@ const Home = () => {
               </h3>
             </div>
           </div>
-  
+
           {/* Right Column - Circular Graphic */}
           <div className="w-full lg:w-[45%] h-[400px] lg:h-[600px] -right-[15%] relative flex items-center justify-center mt-16 lg:mt-0">
             {/* Rings */}
             <div className="absolute w-[250px] h-[250px] lg:w-[200px] lg:h-[200px] rounded-full border border-[#0A26471A]"></div>
             <div className="absolute w-[380px] h-[380px] lg:w-[350px] lg:h-[350px] rounded-full border border-[#0A26471A]"></div>
             <div className="absolute w-[510px] h-[510px] lg:w-[500px] lg:h-[500px] rounded-full border border-[#0A26471A]"></div>
-  
+
             {/* Center Logo */}
             <div className="absolute w-[80px] h-[80px] lg:w-[80px] lg:h-[80px] bg-white rounded-full shadow-2xl flex items-center justify-center z-10">
               <img src={Logo} className='rounded-full' />
             </div>
-  
+
             {/* Orbiting Icons (Positioned approximately) */}
             <div className="absolute top-[5%] right-[35%] w-[50px] h-[50px] bg-white rounded-2xl shadow-lg flex items-center justify-center text-gray-700">
               <img src={Group1} className='w-8 h-8' />
             </div>
-  
+
             <div className="absolute top-[25%] left-[0%] w-[60px] h-[60px] bg-white rounded-2xl shadow-lg flex items-center justify-center text-gray-700 transform -rotate-12">
               <img src={Group2} className='w-8 h-8' />
             </div>
-  
+
             <div className="absolute bottom-[30%] left-[15%] w-[60px] h-[60px] bg-white rounded-2xl shadow-lg flex items-center justify-center text-gray-700 transform rotate-12">
               <img src={Group3} className='w-8 h-8' />
             </div>
-  
+
             <div className="absolute bottom-[25%] right-[20%] w-[60px] h-[60px] bg-white rounded-2xl shadow-lg flex items-center justify-center text-gray-700 transform -rotate-6">
               <img src={Group4} className='w-8 h-8' />
             </div>
-  
+
             <div className="absolute top-[35%] right-[10%] w-[60px] h-[60px] bg-white rounded-2xl shadow-lg flex items-center justify-center text-gray-700">
               <img src={Group5} className='w-8 h-8' />
             </div>
@@ -299,14 +302,40 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Dashed background SVG line (decorative approximation) */}
-        <svg className="absolute top-[200px] left-0 w-full h-[600px] pointer-events-none opacity-40 z-0" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none">
-          <path d="M-100,100 C200,50 400,200 600,100 C800,0 1000,150 1200,100 C1400,50 1600,200 1800,150" stroke="#9CA3AF" strokeWidth="2" strokeDasharray="8 8" />
-          <path d="M1200,100 C1300,50 1400,200 1300,350 C1200,500 900,450 700,450 C400,450 200,500 100,400 C0,300 100,200 200,250" stroke="#9CA3AF" strokeWidth="2" strokeDasharray="8 8" />
-        </svg>
-
         {/* Grid Container */}
-        <div className="max-w-[1100px] mx-auto px-4 relative z-10">
+        <div className="max-w-[1100px] mx-auto px-4 relative z-10 w-full">
+          {/* Desktop dashed line connection */}
+          <svg
+            className="absolute pointer-events-none opacity-60 z-0 hidden lg:block overflow-visible"
+            style={{
+              width: '830px',
+              height: '740px',
+              top: '0',
+              left: '50%',
+              transform: 'translateX(-50%)'
+            }}
+            viewBox="0 0 830 740"
+            fill="none"
+          >
+            <path
+              d="M 200,110 
+                 Q 270,160 415,110 
+                 Q 560,60 705,110 
+                 C 750,100 800,380 705,350 
+                 M 125,110 
+                 C -100,110 -100,370 125,370 
+                 Q 270,320 415,370 
+                 Q 560,320 705,370 
+                 M 690,410 
+                 Q 487,450 270,470 
+                 M 270,630 
+                 Q 415,580 560,630"
+              stroke="#777777"
+              strokeWidth="2"
+              strokeDasharray="8 8"
+              fill="none"
+            />
+          </svg>
           <div className="flex flex-wrap justify-center gap-10">
             {steps.map((step, index) => (
               <StepCard key={index} {...step} />
@@ -315,8 +344,18 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Learning Paths Section */}
+      <LearningPaths />
+
+      {/* Job Portal Section */}
+      <JobPortal />
+
+      {/* Your Journey Section */}
+      <YourJourney />
+
     </div>
   );
 };
+
 
 export default Home;
