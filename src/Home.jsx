@@ -13,18 +13,17 @@ import Group5 from './assets/Group-5.png';
 import GraduationCap from './assets/GraduationCap.png';
 import Achievement from './assets/achievement-icon1.png';
 import QuizIcon from './assets/quiz-icon1.png';
-<<<<<<< Updated upstream
+
 import Pinned from './assets/Pin-1.png'
 import LearningPaths from './components/LearningPaths';
 import JobPortal from './components/JobPortal';
 import YourJourney from './components/YourJourney';
-=======
-import Pinned from './assets/Pin-1.png';
+
 import CTASection from './components/CTASection';
 import ReferralCard from './components/ReferralCard';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
->>>>>>> Stashed changes
+
 
 const steps = [
   {
@@ -100,13 +99,8 @@ const steps = [
 const StepCard = ({ number, title, description, colorText, bgColor, icon, isPinnedRight, isPinnedLeft, rotateClass }) => (
   <div className={`relative bg-white p-[10px] rounded-[32px] shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] w-[250px] flex-shrink-0 ${rotateClass || ''} hover:-translate-y-2 transition-transform duration-300 z-10`}>
     {(isPinnedLeft || isPinnedRight) && (
-<<<<<<< Updated upstream
       <div className={`absolute -top-2 ${isPinnedLeft ? '-left-4' : 'right-0'} w-14 h-14 z-20`}>
         <img src={Pinned} className="w-[89px] h-[80px]object-contain" alt="Pin" />
-=======
-      <div className={`absolute -top-6 ${isPinnedLeft ? 'left-6' : 'right-6'} w-14 h-14 z-20`}>
-        <img src={Pinned} className="w-full h-full object-contain" alt="Pin" />
->>>>>>> Stashed changes
       </div>
     )}
     <div className={`w-[230px] h-[175px] rounded-[24px] p-5 flex flex-col ${bgColor}`}>
@@ -356,7 +350,7 @@ const Home = () => {
           </div>
         </div>
 
-<<<<<<< Updated upstream
+
       {/* Learning Paths Section */}
       <LearningPaths />
 
@@ -366,7 +360,7 @@ const Home = () => {
       {/* Your Journey Section */}
       <YourJourney />
 
-=======
+
         {/* Testimonials Section */}
         <Testimonials />
 
@@ -377,7 +371,7 @@ const Home = () => {
         <CTASection />
       </div>
       <Footer />
->>>>>>> Stashed changes
+
     </div>
   );
 };
