@@ -113,34 +113,36 @@ const jobs = [
 
 const JobPortal = () => {
   return (
-    <div className="w-full bg-[#F4F5F9] pt-20 pb-28 px-8 lg:px-[125px] flex flex-col items-center text-center">
+    <div className="w-full bg-transparent pt-10 flex flex-col items-center text-left">
 
       {/* Header Section */}
-      <div className="flex flex-col items-center">
+      <div className="w-full max-w-full 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 flex flex-col items-center text-left mb-16">
         {/* Badge */}
-        <div className="bg-[#F1EDFF] text-[#000000] text-[16px] font-Bold font-Inter-700 px-5 py-2 rounded-full mb-6 ">
+        <div className="bg-[linear-gradient(135deg,_#F1EDFF_15%,_#F8F5FF_85%)] px-5 py-3 rounded-xl mb-6" style={{fontFamily: 'Inter', fontWeight: 700, fontStyle: 'Bold', fontSize: '14px', color: '#000000'}}>
           Placements & Job Portal
         </div>
 
         {/* Main Title */}
-        <h2 style={{ fontFamily: 'Sk-Modernist', fontWeight: 400, fontSize: '60px', color: '#111633' }} className="mb-4">
+        <h2 style={{ fontFamily: 'Sk-Modernist', fontWeight: 400, fontSize: '50px', color: '#111633' }} className="mb-4">
           Top Opportunities Just for You
         </h2>
 
         {/* Subtitle */}
-        <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '18px', color: '#656C88' }} className="max-w-[700px] leading-relaxed mb-16">
+        <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#656C88' }} className="max-w-[700px] leading-relaxed">
           Explore thousands of active job openings from top companies.<br />
+          <span className='ml-2'>
           Find the right role that matches your skills and career goals.
+          </span>
         </p>
       </div>
 
       {/* Grid Section */}
-      <div className="w-full max-w-[1100px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+      <div className="w-full max-w-full 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 text-left">
         {jobs.map((job, index) => (
           <div key={index} className="bg-white rounded-[24px] p-5 flex flex-col justify-between border-2 border-transparent hover:border-[#4F46E5]/20 shadow-[0px_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md transition-all duration-300 group cursor-pointer">
             {/* Header (Logo + Title + Company) */}
             <div className="flex items-center gap-4 mb-5">
-              <div className={`w-14 h-14 flex flex-shrink-0 font-bold items-center justify-center shadow-sm rounded-[1px] ${job.logoText === 'N' ? 'border-[2px] border-[#111111] font-[Georgia] text-[#111111]' : 'border-[1px] border-[#F3F4F6] font-Arial'} ${['in', 'Bē'].includes(job.logoText) ? 'text-[21px]' : 'text-[31px]'} ${job.logoBg} ${job.logoColor}`}>
+              <div className={`w-12 h-12 flex flex-shrink-0 font-bold items-center justify-center shadow-sm rounded-[10px] ${job.logoText === 'N' ? 'border-[2px] border-[#111111] font-[Georgia] text-[#111111]' : 'border-[1px] border-[#F3F4F6] font-Arial'} ${['in', 'Bē'].includes(job.logoText) ? 'text-[21px]' : 'text-[31px]'} ${job.logoBg} ${job.logoColor}`}>
                 {job.logoText}
               </div>
               <div>
@@ -186,7 +188,7 @@ const JobPortal = () => {
 
       {/* Explore More Button */}
       <div className="mt-16 flex justify-center">
-        <button className="bg-white w-[210px] h-[55px] rounded-[25px] border-[2px] border-black/[0.28] text-[#000000] font-Inter text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-gray-50 hover:border-black/50 transition-all shadow-sm">
+        <button className="bg-white w-[210px] h-[55px] rounded-full border-[2px] border-black/[0.28] text-[#000000] font-Inter text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-gray-50 hover:border-black/50 transition-all shadow-sm">
           Explore more jobs <span className="text-xl leading-none mb-0.5">→</span>
         </button>
       </div>

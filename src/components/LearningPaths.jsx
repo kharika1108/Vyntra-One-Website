@@ -8,28 +8,29 @@ import image108 from '../assets/image 108.png';
 
 const LearningPaths = () => {
   return (
-    <div className="w-full bg-[#FFFFFF] py-20 px-8 lg:px-[125px] flex flex-col items-center">
+    <div className="w-full bg-transparent py-20 flex flex-col items-center">
 
       {/* Header */}
-      <div className="w-full max-w-[1200px] flex justify-between items-end mb-10">
-        <div>
-          <h2 style={{ fontFamily: 'Sk-Modernist', fontWeight: 400, fontSize: '60px', color: '#121212' }} className="leading-tight">
+      <div className="w-full max-w-full 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 flex justify-between items-end mb-10">
+        <div className="flex flex-col text-left">
+          <h2 style={{ fontFamily: 'Outfit', fontWeight: 600, fontSize: '32px', color: '#1B2347' }} className="mb-2">
             Learning Paths
           </h2>
-          <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '16px', color: '#60646B' }} className="mt-2">
-            Choose your path. Build your skills. Shape your future.
+          <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#656C88' }} className="max-w-2xl">
+            Choose from carefully curated paths designed to take you from beginner to expert in your chosen field.
           </p>
         </div>
-        <div className="bg-[#B6F47C] text-[#1D3420] text-[12px] font-Inter px-3 py-1 rounded-full border border-[#A6F4C5]">
-          3 Paths
-        </div>
+        <button className="hidden md:flex items-center gap-2 text-[#0A2640] font-semibold text-[15px] group hover:opacity-80 transition-opacity">
+          Explore Paths
+          <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </button>
       </div>
 
-      {/* Cards Container */}
-      <div className="w-full max-w-[1080px] grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Cards Grid */}
+      <div className="w-full max-w-full 2xl:max-w-[1536px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
 
         {/* Digital Marketing Card */}
-        <div className="bg-[#D8F399] rounded-[32px] p-8 relative flex flex-col h-[370px] hover:-translate-y-2 transition-transform duration-300">
+        <div className="bg-[linear-gradient(90deg,_#C6F29A_13.97%,_#D9F9A8_50%,_#BFF09C_86.03%)] rounded-[32px] p-8 relative flex flex-col h-[340px] hover:-translate-y-2 transition-transform duration-300">
           <div className="absolute top-8 right-8 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm cursor-pointer hover:scale-105 transition-transform z-10">
             <svg className="w-5 h-5 text-[#11152F]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
           </div>
@@ -38,16 +39,16 @@ const LearningPaths = () => {
             <div className="w-12 h-12 rounded-xl shadow-sm flex items-center justify-center overflow-hidden mb-4 mt-6">
               <img src={categoryIcon1} alt="Digital Marketing" className="w-full h-full object-cover" />
             </div>
-            <h3 style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '27px', color: '#11152F' }} className="mb-4 leading-tight pr-4">
+            <h3 style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '25px', color: '#11152F' }} className="mb-4 leading-tight pr-4">
               Digital<br />Marketing
             </h3>
-            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#20283B' }} className="mb-3">
+            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '12px', color: '#20283B' }} className="mb-3">
               Learn SEO, Social Media, Google Ads, Content Marketing & more.
             </p>
           </div>
 
           <div className="flex justify-between items-center mt-auto">
-            <span className="bg-white/80 text-[#278C16] text-xs font-Inter-700 px-3 py-1.5 rounded-full">
+            <span className="bg-white/80 px-3 py-1.5 rounded-full" style={{fontFamily: 'Inter', fontWeight: 700, fontStyle: 'Bold', fontSize: '12px', color: '#278C16'}}>
               12+ Courses
             </span>
             <div className="flex items-center -space-x-2">
@@ -62,7 +63,7 @@ const LearningPaths = () => {
         </div>
 
         {/* Stock Market Card */}
-        <div className="bg-[#FFD1A6] rounded-[32px] p-8 relative flex flex-col h-[370px] hover:-translate-y-2 transition-transform duration-300">
+        <div className="bg-[linear-gradient(90deg,_#FFD19E_13.97%,_#FFD7AD_50%,_#FFCB9D_86.03%)] rounded-[32px] p-8 relative flex flex-col h-[340px] hover:-translate-y-2 transition-transform duration-300">
           <div className="absolute top-8 right-8 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm cursor-pointer hover:scale-105 transition-transform z-10">
             <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
           </div>
@@ -71,16 +72,16 @@ const LearningPaths = () => {
             <div className="w-12 h-12 rounded-xl shadow-sm flex items-center justify-center overflow-hidden mb-4 mt-6">
               <img src={categoryIcon2} alt="Stock Market" className="w-full h-full object-cover" />
             </div>
-            <h3 style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '27px', color: '#11152F' }} className="mb-4 leading-tight pr-4">
+            <h3 style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '25px', color: '#11152F' }} className="mb-4 leading-tight pr-4">
               Stock<br />Market
             </h3>
-            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#20283B' }} className="mb-4">
+            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '12px', color: '#20283B' }} className="mb-4">
               Master trading, technical analysis, investing, portfolio management & more.
             </p>
           </div>
 
           <div className="flex justify-between items-center mt-auto">
-            <span className="bg-white/80 text-[#E46112] text-[13px] font-Inter-700 px-3 py-1.5 rounded-full">
+            <span className="bg-white/80 px-3 py-1.5 rounded-full" style={{fontFamily: 'Inter', fontWeight: 700, fontStyle: 'Bold', fontSize: '12px', color: '#e46112'}}>
               10+ Courses
             </span>
             <div className="flex items-center -space-x-2">
@@ -95,7 +96,7 @@ const LearningPaths = () => {
         </div>
 
         {/* Information Technology Card */}
-        <div className="bg-[#BFD4FF] rounded-[32px] p-8 relative flex flex-col h-[370px] hover:-translate-y-2 transition-transform duration-300">
+        <div className="bg-[linear-gradient(90deg,_#B9D1F9_13.97%,_#C8DCFA_50%,_#C1D6F7_86.03%)] rounded-[32px] p-8 relative flex flex-col h-[340px] hover:-translate-y-2 transition-transform duration-300">
           <div className="absolute top-8 right-8 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm cursor-pointer hover:scale-105 transition-transform z-10">
             <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
           </div>
@@ -104,16 +105,16 @@ const LearningPaths = () => {
             <div className="w-12 h-12 rounded-xl shadow-sm flex items-center justify-center overflow-hidden mb-4 mt-6">
               <img src={categoryIcon3} alt="Information Technology" className="w-full h-full object-cover" />
             </div>
-            <h3 style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '27px', color: '#11152F' }} className="mb-4 leading-tight pr-4">
+            <h3 style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '25px', color: '#11152F' }} className="mb-4 leading-tight pr-4">
               Information<br />Technology
             </h3>
-            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#20283B' }} className="mb-4">
+            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '12px', color: '#20283B' }} className="mb-4">
               Learn programming, web development, data structures, cloud & more.
             </p>
           </div>
 
           <div className="flex justify-between items-center mt-auto">
-            <span className="bg-white/80 text-[#3375D7] text-[13px] font-Inter-700 px-3 py-1.5 rounded-full">
+            <span className="bg-white/80 px-3 py-1.5 rounded-full" style={{fontFamily: 'Inter', fontWeight: 700, fontStyle: 'Bold', fontSize: '12px', color: '#3375D7'}}>
               15+ Courses
             </span>
             <div className="flex items-center -space-x-2">

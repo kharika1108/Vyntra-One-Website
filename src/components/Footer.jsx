@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="w-full bg-white pt-16 pb-8 border-t border-gray-100">
-      <div className="max-w-[1250px] mx-auto px-4 md:px-8 lg:px-16 flex flex-col">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 2xl:px-24 flex flex-col">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between mb-15 gap-12 lg:gap-8">
 
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
 
           {/* Right Columns - Links */}
-          <div className="flex flex-col sm:flex-row gap-12 sm:gap-16 lg:w-[45%]">
+          <div className="flex flex-col sm:flex-row gap-12 sm:gap-16 lg:w-auto lg:justify-end">
 
             {/* Navigation */}
             <div className="flex flex-col">
@@ -68,17 +68,17 @@ const Footer = () => {
         </div>
 
         {/* Huge Text Section */}
-        <div className="w-full relative overflow-hidden flex justify-center -mt-8">
-          <h1 style={{ fontFamily: 'Inter', fontWeight: 700, fontStyle: 'Bold', fontSize: '200px', color: '#111633', lineHeight: '0.9' }}>
+        <div className="w-full relative overflow-hidden flex justify-center mt-2 md:-mt-8">
+          <h1 className="text-[55px] sm:text-[80px] md:text-[110px] lg:text-[140px] xl:text-[200px] whitespace-nowrap relative z-10" style={{ fontFamily: 'Inter', fontWeight: 700, fontStyle: 'Bold', color: '#111633', lineHeight: '0.9' }}>
             Vyntra One
           </h1>
           {/* Masking div to hide the text below the line */}
-          <div className="absolute bottom-0 left-0 w-full h-[12%] bg-white border-t-[3px] border-[#DFE1E8]"></div>
+          <div className="absolute bottom-0 left-0 w-full h-[12%] bg-white border-t-[3px] border-[#DFE1E8] z-20"></div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 ml-[20%]" style={{ fontFamily: 'Inter', fontWeight: 400, fontStyle: 'Regular', fontSize: '13px', color: '#30344A' }}>
-          <div className="flex flex-wrap items-center gap-6 md:gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-center text-[#60646B] text-[13px] pt-8 font-inter border-t border-gray-100/50">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 md:gap-10">
             <span>© 2024 Vyntra</span>
             <span>All Rights Reserved</span>
             <a href="#" className="hover:text-[#0F172A] transition-colors">Privacy Policy</a>

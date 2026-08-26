@@ -2,8 +2,8 @@ import React from 'react';
 
 const ReferralCard = () => {
   return (
-    <div className="w-full px-4 md:px-8 lg:px-16 pt-16 pb-4">
-      <div className="max-w-[1250px] mx-auto w-full rounded-[24px] border border-[#DEDFE0] overflow-hidden flex flex-col md:flex-row items-center justify-between px-8 md:px-14 lg:px-20 py-12 md:py-10 shadow-sm"
+    <div className="w-full px-4 md:px-8 xl:px-16 pt-16 pb-4">
+      <div className="max-w-[1280px] mx-auto w-auto rounded-[24px] border border-[#DEDFE0] overflow-hidden flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-14 lg:px-20 py-12 shadow-sm"
            style={{ background: 'linear-gradient(90deg, #FFF0C5 0%, #F8F7F4 50%, #F6F8FB 100%)' }}>
         
         <div className="flex flex-col items-start max-w-[800px] mb-8 md:mb-0">

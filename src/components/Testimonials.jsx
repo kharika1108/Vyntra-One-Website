@@ -92,24 +92,26 @@ const Testimonials = () => {
 
   return (
     <div className="w-full pt-20 pb-10 overflow-hidden relative">
-      <div className="max-w-[1250px] mx-auto w-full flex flex-col px-4 md:px-8 lg:px-16">
+      <div className="max-w-[1440px] mx-auto w-full flex flex-col px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20">
         
         {/* Header Area */}
-        <div className="flex flex-col items-start mb-14 max-w-4xl">
-          <div className="flex items-center gap-2 px-4 py-1.5 bg-[#EDE8FF] rounded-full mb-6">
-            <span className="text-[#9333EA] text-[13px]">❤️</span>
-            <span style={{ fontFamily: 'Inter', fontWeight: 400, fontStyle: 'Regular', fontSize: '11px', color: '#292553' }}>Loved by Learners</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full mb-14">
+          <div className="flex flex-col items-start xl:col-span-2">
+            <div className="flex items-center gap-2 px-4 py-1.5 bg-[#EDE8FF] rounded-full mb-6">
+              <span className="text-[#9333EA] text-[13px]">❤️</span>
+              <span style={{ fontFamily: 'Inter', fontWeight: 400, fontStyle: 'Regular', fontSize: '11px', color: '#292553' }}>Loved by Learners</span>
+            </div>
+            
+            <h2 style={{ fontFamily: 'Sk-Modernist', fontWeight: 400, fontStyle: 'Regular', fontSize: '45px', color: '#111318' }}>
+              What people are saying about Vyntra?
+            </h2>
+            
+            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontStyle: 'Regular', fontSize: '15px', color: '#484B53', marginTop: '18px', marginBottom: '15px' }}>
+              Don't just take our word for it—see what our learners have to say
+              <br className="hidden md:block" />
+              about their learning experience!
+            </p>
           </div>
-          
-          <h2 style={{ fontFamily: 'Sk-Modernist', fontWeight: 400, fontStyle: 'Regular', fontSize: '45px', color: '#111318' }}>
-            What people are saying about Vyntra?
-          </h2>
-          
-          <p style={{ fontFamily: 'Inter', fontWeight: 400, fontStyle: 'Regular', fontSize: '15px', color: '#484B53', marginTop: '18px', marginBottom: '15px' }}>
-            Don't just take our word for it—see what our learners have to say
-            <br className="hidden md:block" />
-            about their learning experience!
-          </p>
         </div>
       </div>
 
