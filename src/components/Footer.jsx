@@ -5,6 +5,7 @@ const Footer = () => {
     <footer className="w-full bg-white pt-16 pb-8 border-t border-gray-100">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 2xl:px-24 flex flex-col">
         {/* Top Section */}
+        {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between mb-15 gap-12 lg:gap-8">
 
           {/* Left Column - Newsletter & Social */}

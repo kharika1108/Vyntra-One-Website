@@ -16,6 +16,8 @@ import HowItWorksSection from './components/HowItWorksSection';
 const Home = () => {
   return (
     <div className="relative w-full overflow-hidden flex flex-col items-center pt-12 bg-[#FFFFFF]">
+
+      
       <HeroSection />
       <PhonesSection />
       <LearningShouldntStopSection />
